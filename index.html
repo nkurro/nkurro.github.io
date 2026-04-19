@@ -3,44 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urgent: Document Update</title>
-    <!-- Social Media Preview Tags -->
-    <meta property="og:title" content="Exclusive Project Leak">
-    <meta property="og:description" content="View the full leaked specifications and early design images.">
-    <meta property="og:image" content="https://placeholder.com">
+    <title>AXENEST | Professional Gear Solutions</title>
+    <!-- Social Preview (disguises the link on Discord/WhatsApp) -->
+    <meta property="og:title" content="AxeNest: Professional Guitar Solutions">
+    <meta property="og:description" content="Play fast, stay organized — all in one stand. View our new collection.">
+    <meta property="og:image" content="https://unsplash.com">
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; font-family: sans-serif; }
+        @import url('https://googleapis.com');
+        body, html { margin: 0; padding: 0; height: 100%; width: 100%; overflow: hidden; background-color: #000; font-family: 'Roboto', sans-serif; color: #fff; }
+        
         #overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95); color: white; display: flex;
-            flex-direction: column; align-items: center; justify-content: center;
-            z-index: 100; cursor: pointer; text-align: center;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle, rgba(40,40,40,0.8) 0%, rgba(0,0,0,1) 80%);
         }
-        iframe { width: 100vw; height: 100vh; border: none; }
-        .btn { padding: 15px 30px; background: #007bff; border-radius: 5px; font-weight: bold; margin-top: 20px; color: white; text-decoration: none; }
+
+        h1 { font-family: 'Permanent Marker', cursive; font-size: 5rem; text-transform: uppercase; font-style: italic; margin: 0; }
+        p { font-weight: 300; letter-spacing: 2px; text-transform: uppercase; margin-top: 10px; opacity: 0.8; }
+        .btn { padding: 12px 40px; border: 1px solid #fff; background: transparent; color: white; font-weight: 700; text-transform: uppercase; margin-top: 40px; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #fff; color: #000; }
     </style>
 </head>
 <body>
 
-    <div id="overlay" onclick="startPrank()">
-        <h1>Access Restricted</h1>
-        <p>This document is encrypted. Please click below to verify your identity.</p>
-        <div class="btn">Verify & View Document</div>
-    </div>
-
-    <div id="video-container" style="display:none;">
-        <iframe id="rickroll" src="https://youtube.com" 
-        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div id="overlay">
+        <h1>AXENEST</h1>
+        <p>Play fast, stay organized — all in one stand.</p>
+        <button class="btn" onclick="trigger()">Shop Now</button>
     </div>
 
     <script>
-        function startPrank() {
-            document.getElementById('overlay').style.display = 'none';
-            document.getElementById('video-container').style.display = 'block';
-            // Force reload to trigger autoplay after user interaction
-            var iframe = document.getElementById('rickroll');
-            iframe.src += "&rel=0"; 
+        function trigger() {
+            // Using window.location.replace is the most stable way to bypass iframe blocks.
+            window.location.replace("https://www.youtube.com/watch?v=xvFZjo5PgG0");
         }
     </script>
 </body>
 </html>
+
