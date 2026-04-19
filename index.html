@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgent: Document Update</title>
+    <!-- Social Media Preview Tags -->
+    <meta property="og:title" content="Exclusive Project Leak">
+    <meta property="og:description" content="View the full leaked specifications and early design images.">
+    <meta property="og:image" content="https://placeholder.com">
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #000; font-family: sans-serif; }
+        #overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95); color: white; display: flex;
+            flex-direction: column; align-items: center; justify-content: center;
+            z-index: 100; cursor: pointer; text-align: center;
+        }
+        iframe { width: 100vw; height: 100vh; border: none; }
+        .btn { padding: 15px 30px; background: #007bff; border-radius: 5px; font-weight: bold; margin-top: 20px; color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div id="overlay" onclick="startPrank()">
+        <h1>Access Restricted</h1>
+        <p>This document is encrypted. Please click below to verify your identity.</p>
+        <div class="btn">Verify & View Document</div>
+    </div>
+
+    <div id="video-container" style="display:none;">
+        <iframe id="rickroll" src="https://youtube.com" 
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function startPrank() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('video-container').style.display = 'block';
+            // Force reload to trigger autoplay after user interaction
+            var iframe = document.getElementById('rickroll');
+            iframe.src += "&rel=0"; 
+        }
+    </script>
+</body>
+</html>
